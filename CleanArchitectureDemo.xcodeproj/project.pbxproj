@@ -17,6 +17,11 @@
 		7703198428B45AA800B73161 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703198328B45AA800B73161 /* BaseError.swift */; };
 		7703198828B45B9900B73161 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703198628B45B9900B73161 /* CategoriesViewModel.swift */; };
 		7703198928B45B9900B73161 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703198728B45B9900B73161 /* CategoriesView.swift */; };
+		7703199528B45E7D00B73161 /* CategoriesRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703198D28B45E7D00B73161 /* CategoriesRepositoryImpl.swift */; };
+		7703199628B45E7D00B73161 /* CategoriesAPIDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703198F28B45E7D00B73161 /* CategoriesAPIDataSourceImpl.swift */; };
+		7703199728B45E7D00B73161 /* CategoriesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703199028B45E7D00B73161 /* CategoriesDataSource.swift */; };
+		7703199828B45E7D00B73161 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703199228B45E7D00B73161 /* CategoriesResponse.swift */; };
+		7703199928B45E7D00B73161 /* CategoriesDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703199428B45E7D00B73161 /* CategoriesDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +36,11 @@
 		7703198328B45AA800B73161 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		7703198628B45B9900B73161 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		7703198728B45B9900B73161 /* CategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		7703198D28B45E7D00B73161 /* CategoriesRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRepositoryImpl.swift; sourceTree = "<group>"; };
+		7703198F28B45E7D00B73161 /* CategoriesAPIDataSourceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesAPIDataSourceImpl.swift; sourceTree = "<group>"; };
+		7703199028B45E7D00B73161 /* CategoriesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesDataSource.swift; sourceTree = "<group>"; };
+		7703199228B45E7D00B73161 /* CategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
+		7703199428B45E7D00B73161 /* CategoriesDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				7703198528B45B9900B73161 /* Presentation */,
+				7703198B28B45E7D00B73161 /* Data */,
 				7703197628B4596300B73161 /* Domain */,
 			);
 			path = Category;
@@ -163,6 +174,50 @@
 				7703198728B45B9900B73161 /* CategoriesView.swift */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		7703198B28B45E7D00B73161 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7703198C28B45E7D00B73161 /* Repository */,
+				7703198E28B45E7D00B73161 /* RemoteDataSource */,
+				7703199328B45E7D00B73161 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7703198C28B45E7D00B73161 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7703198D28B45E7D00B73161 /* CategoriesRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7703198E28B45E7D00B73161 /* RemoteDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				7703198F28B45E7D00B73161 /* CategoriesAPIDataSourceImpl.swift */,
+				7703199028B45E7D00B73161 /* CategoriesDataSource.swift */,
+				7703199128B45E7D00B73161 /* Response */,
+			);
+			path = RemoteDataSource;
+			sourceTree = "<group>";
+		};
+		7703199128B45E7D00B73161 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				7703199228B45E7D00B73161 /* CategoriesResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		7703199328B45E7D00B73161 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7703199428B45E7D00B73161 /* CategoriesDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +292,15 @@
 			files = (
 				7703198928B45B9900B73161 /* CategoriesView.swift in Sources */,
 				7703197B28B459C100B73161 /* CategoriesRepository.swift in Sources */,
+				7703199728B45E7D00B73161 /* CategoriesDataSource.swift in Sources */,
+				7703199828B45E7D00B73161 /* CategoriesResponse.swift in Sources */,
+				7703199528B45E7D00B73161 /* CategoriesRepositoryImpl.swift in Sources */,
 				7703198428B45AA800B73161 /* BaseError.swift in Sources */,
+				7703199628B45E7D00B73161 /* CategoriesAPIDataSourceImpl.swift in Sources */,
 				7703197F28B459F200B73161 /* GetCategoriesUseCase.swift in Sources */,
 				7703193D28B43A5F00B73161 /* ContentView.swift in Sources */,
 				7703193B28B43A5F00B73161 /* CleanArchitectureDemoApp.swift in Sources */,
+				7703199928B45E7D00B73161 /* CategoriesDataModel.swift in Sources */,
 				7703197D28B459E100B73161 /* CategoryDomainModel.swift in Sources */,
 				7703198828B45B9900B73161 /* CategoriesViewModel.swift in Sources */,
 			);
