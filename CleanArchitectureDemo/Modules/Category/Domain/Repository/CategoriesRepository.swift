@@ -8,5 +8,4 @@
 import Foundation
 protocol CategoriesRepository {
     func getCategories() async throws -> [CategoryDomainModel]
-    static func getInstance() -> CategoriesRepository
 }

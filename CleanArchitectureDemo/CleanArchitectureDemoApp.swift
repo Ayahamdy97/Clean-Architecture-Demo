@@ -11,7 +11,7 @@ import SwiftUI
 struct CleanArchitectureDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CategoriesView()
         }
     }
 }
