@@ -11,9 +11,9 @@
 		7703193D28B43A5F00B73161 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703193C28B43A5F00B73161 /* ContentView.swift */; };
 		7703193F28B43A6000B73161 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7703193E28B43A6000B73161 /* Assets.xcassets */; };
 		7703194228B43A6000B73161 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7703194128B43A6000B73161 /* Preview Assets.xcassets */; };
-		7703195E28B44D1C00B73161 /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703195928B44D1C00B73161 /* CategoriesRepository.swift */; };
-		7703195F28B44D1C00B73161 /* CategoriesDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703195B28B44D1C00B73161 /* CategoriesDomainModel.swift */; };
-		7703196028B44D1C00B73161 /* GetCategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703195D28B44D1C00B73161 /* GetCategoriesUseCase.swift */; };
+		7703197B28B459C100B73161 /* CategoriesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703197A28B459C100B73161 /* CategoriesRepository.swift */; };
+		7703197D28B459E100B73161 /* CategoryDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703197C28B459E100B73161 /* CategoryDomainModel.swift */; };
+		7703197F28B459F200B73161 /* GetCategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7703197E28B459F200B73161 /* GetCategoriesUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,9 +22,9 @@
 		7703193C28B43A5F00B73161 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7703193E28B43A6000B73161 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7703194128B43A6000B73161 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		7703195928B44D1C00B73161 /* CategoriesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
-		7703195B28B44D1C00B73161 /* CategoriesDomainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesDomainModel.swift; sourceTree = "<group>"; };
-		7703195D28B44D1C00B73161 /* GetCategoriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesUseCase.swift; sourceTree = "<group>"; };
+		7703197A28B459C100B73161 /* CategoriesRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesRepository.swift; sourceTree = "<group>"; };
+		7703197C28B459E100B73161 /* CategoryDomainModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDomainModel.swift; sourceTree = "<group>"; };
+		7703197E28B459F200B73161 /* GetCategoriesUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		7703193928B43A5F00B73161 /* CleanArchitectureDemo */ = {
 			isa = PBXGroup;
 			children = (
-				7703195728B44D1C00B73161 /* Domain */,
+				7703197428B4592E00B73161 /* Modules */,
 				7703193A28B43A5F00B73161 /* CleanArchitectureDemoApp.swift */,
 				7703193C28B43A5F00B73161 /* ContentView.swift */,
 				7703193E28B43A6000B73161 /* Assets.xcassets */,
@@ -74,37 +74,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		7703195728B44D1C00B73161 /* Domain */ = {
+		7703197428B4592E00B73161 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				7703195828B44D1C00B73161 /* Repository */,
-				7703195A28B44D1C00B73161 /* Model */,
-				7703195C28B44D1C00B73161 /* UseCase */,
+				7703197528B4592E00B73161 /* Category */,
 			);
-			name = Domain;
-			path = ../../CleanArchitectureProducts/CleanArchitectureProducts/Domain;
+			path = Modules;
 			sourceTree = "<group>";
 		};
-		7703195828B44D1C00B73161 /* Repository */ = {
+		7703197528B4592E00B73161 /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				7703195928B44D1C00B73161 /* CategoriesRepository.swift */,
+				7703197628B4596300B73161 /* Domain */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7703197628B4596300B73161 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7703197728B4596300B73161 /* Repository */,
+				7703197828B4596300B73161 /* Model */,
+				7703197928B4596300B73161 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7703197728B4596300B73161 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7703197A28B459C100B73161 /* CategoriesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		7703195A28B44D1C00B73161 /* Model */ = {
+		7703197828B4596300B73161 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7703195B28B44D1C00B73161 /* CategoriesDomainModel.swift */,
+				7703197C28B459E100B73161 /* CategoryDomainModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		7703195C28B44D1C00B73161 /* UseCase */ = {
+		7703197928B4596300B73161 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				7703195D28B44D1C00B73161 /* GetCategoriesUseCase.swift */,
+				7703197E28B459F200B73161 /* GetCategoriesUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -179,11 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7703195E28B44D1C00B73161 /* CategoriesRepository.swift in Sources */,
-				7703196028B44D1C00B73161 /* GetCategoriesUseCase.swift in Sources */,
-				7703195F28B44D1C00B73161 /* CategoriesDomainModel.swift in Sources */,
+				7703197B28B459C100B73161 /* CategoriesRepository.swift in Sources */,
+				7703197F28B459F200B73161 /* GetCategoriesUseCase.swift in Sources */,
 				7703193D28B43A5F00B73161 /* ContentView.swift in Sources */,
 				7703193B28B43A5F00B73161 /* CleanArchitectureDemoApp.swift in Sources */,
+				7703197D28B459E100B73161 /* CategoryDomainModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
